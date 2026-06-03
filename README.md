@@ -80,5 +80,6 @@ The two helper functions (`walk` for recursing the JSON tree, `replaceInString` 
 
 - **Case-insensitive matching with case-preserving replacement.** The natural next step is to support matching `"Dog"`, `"DOG"`, etc., while preserving the original casing in the replacement — `"Dog"` → `"Cat"`, `"DOG"` → `"CAT"`. This could be exposed as an optional query parameter (e.g. `caseInsensitive=true`).
 - **Configurable search and replace values.** The `"dog"` → `"cat"` strings are hardcoded. Accepting them as parameters would make the service general-purpose.
+- **Caching layer.** Caching for identical payloads would make this more scalable and able to handle higher load assuming that some of the payloads were repeated. 
 - **Rate limiting middleware.**
 - **Dockerfile and deployment config.**
