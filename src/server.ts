@@ -1,5 +1,5 @@
 import express, { type Request, type Response } from "express";
-import { replaceInJson } from "./replace.js";
+import { replaceInJson } from "./replace";
 
 export const app = express();
 
